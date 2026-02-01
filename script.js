@@ -20,3 +20,24 @@ async function getLastPost() {
 }
 const lastPost = await getLastPost();
 console.log(lastPost);
+
+import deepClone from "lodash-es";
+const state = {
+  subjects: [
+    { mth: "Math", hum: "Psychology" },
+    { csc: "Computer", lit: "English" },
+  ],
+  user: { rollNum: "sp24-bse-153", name: "Saad Bin Zahid", class: "BSE-4A" },
+};
+
+const stateClone = Object.assign({}, state);
+const stateCloneDeep = deepClone(state);
+
+state.user.name = "Saad Zahid";
+console.log(state);
+console.log(stateClone);
+console.log(stateCloneDeep);
+
+if (module.hot) {
+  module.hot.accept();
+}
