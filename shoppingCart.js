@@ -15,7 +15,6 @@ addToCart("Carrots", 25);
 // }
 
 console.log("Started fetching Todos");
-await fetch(`https://jsonplaceholder.typicode.com/todos`);
 console.log("Finished fetching Todos");
 
 const gamingCheckout = (function () {

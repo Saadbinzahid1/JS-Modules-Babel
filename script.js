@@ -18,8 +18,6 @@ async function getLastPost() {
   console.log(data);
   return { title: data.at(-1).title, body: data.at(-1).body };
 }
-const lastPost = await getLastPost();
-console.log(lastPost);
 
 import deepClone from "lodash-es";
 const state = {
